@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 public class Main {
 
     private static void printNTimes(String message, int n){
@@ -46,6 +48,11 @@ public class Main {
         return palindromic(str, left+1, right-1);
     }
 
+    private static int fibonacci(int n){
+        if(n <= 1) return n;
+        return fibonacci(n - 1) + fibonacci(n - 2);
+    }
+
     public static void main(String[] args) {
         System.out.println("Message n times : ");
         printNTimes("Hello", 5);
@@ -82,6 +89,14 @@ public class Main {
             System.out.println("Palindrome");
         else
             System.out.println("Not a palindrome");
+
+        System.out.println();
+
+        System.out.println("Fibonacci number");
+        System.out.println(fibonacci(6));
+        System.out.println();
     }
+
+
 
     }
