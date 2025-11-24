@@ -28,6 +28,16 @@ public class Main {
         return n * facorial(n-1);
     }
 
+    private static void reverseArray(int[] arr, int left, int right){
+        if (left >= right) return;
+
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+
+        reverseArray(arr, left+1, right-1);
+    }
+
     public static void main(String[] args) {
         System.out.println("Message n times : ");
         printNTimes("Hello", 5);
@@ -48,6 +58,15 @@ public class Main {
         System.out.println("Factorial");
         System.out.println(facorial(5));
         System.out.println();
+
+        System.out.println("Reverse an array : ");
+        int[] arr = {1, 2, 3, 4, 5};
+
+        reverseArray(arr, 0, arr.length - 1);
+
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
 
     }
 }
