@@ -6,12 +6,12 @@ public class Main {
         printNTimes(message, n - 1);
     }
 
-//    private static void print1ToN(int n){
-//        if (n == 0) return;
-//        print1ToN(n - 1);
-//        System.out.println(n);
-//    }
-//
+    private static void print1ToN(int n){
+        if (n == 0) return;
+        print1ToN(n - 1);
+        System.out.println(n);
+    }
+
 //    private static void printNTo1(int n){
 //        if (n == 0) return;
 //        System.out.println(n);
@@ -28,10 +28,10 @@ public class Main {
         printNTimes("Hello", 5);
         System.out.println();
 
-//        System.out.println("1 to N");
-//        print1ToN(10);
-//        System.out.println();
-//
+        System.out.println("1 to N");
+        print1ToN(10);
+        System.out.println();
+
 //        System.out.println("N to 1");
 //        printNTo1(10);
 //        System.out.println();
