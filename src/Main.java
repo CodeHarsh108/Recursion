@@ -23,6 +23,11 @@ public class Main {
         return n + sumOfN(n - 1);
     }
 
+    private static int facorial(int n){
+        if (n == 0 || n == 1) return 1;
+        return n * facorial(n-1);
+    }
+
     public static void main(String[] args) {
         System.out.println("Message n times : ");
         printNTimes("Hello", 5);
@@ -38,6 +43,10 @@ public class Main {
 
         System.out.println("Sum of N numbers");
         System.out.println(sumOfN(10));
+        System.out.println();
+
+        System.out.println("Factorial");
+        System.out.println(facorial(5));
         System.out.println();
 
     }
