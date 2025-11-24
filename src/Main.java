@@ -38,6 +38,14 @@ public class Main {
         reverseArray(arr, left+1, right-1);
     }
 
+    private static boolean palindromic(String str, int left, int right){
+        if (left >= right) return true;
+        if (str.charAt(left) != str.charAt(right)){
+            return false;
+        }
+        return palindromic(str, left+1, right-1);
+    }
+
     public static void main(String[] args) {
         System.out.println("Message n times : ");
         printNTimes("Hello", 5);
@@ -61,12 +69,19 @@ public class Main {
 
         System.out.println("Reverse an array : ");
         int[] arr = {1, 2, 3, 4, 5};
-
         reverseArray(arr, 0, arr.length - 1);
-
         for (int x : arr) {
             System.out.print(x + " ");
         }
+        System.out.println();
+
+        System.out.println("Palindromic or not : ");
+        String str = "madam";
+
+        if (palindromic(str, 0, str.length() - 1))
+            System.out.println("Palindrome");
+        else
+            System.out.println("Not a palindrome");
+    }
 
     }
-}
