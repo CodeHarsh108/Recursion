@@ -18,10 +18,10 @@ public class Main {
         print1ToN(n - 1);
     }
 
-//    private static int sumOfN(int n){
-//        if (n == 0) return 0;
-//        return n + sumOfN(n - 1);
-//    }
+    private static int sumOfN(int n){
+        if (n == 0) return 0;
+        return n + sumOfN(n - 1);
+    }
 
     public static void main(String[] args) {
         System.out.println("Message n times : ");
@@ -36,9 +36,9 @@ public class Main {
         printNTo1(10);
         System.out.println();
 
-//        System.out.println("Sum of N numbers");
-//        System.out.println(sumOfN(10));
-//        System.out.println();
+        System.out.println("Sum of N numbers");
+        System.out.println(sumOfN(10));
+        System.out.println();
 
     }
 }
