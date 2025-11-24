@@ -17,7 +17,7 @@ public class Main {
     private static void printNTo1(int n){
         if (n == 0) return;
         System.out.println(n);
-        print1ToN(n - 1);
+        printNTo1(n - 1);
     }
 
     private static int sumOfN(int n){
